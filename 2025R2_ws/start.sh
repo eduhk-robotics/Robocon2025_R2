@@ -5,13 +5,13 @@
 set -e
 
 # Go to your workspace root
-cd ~/Robocon2025_R2
+cd ~/Robocon2025_R2/2025R2_ws
 
 # Source ROS 2 environment (adjust 'foxy' if you use galactic, humble, iron, etc.)
 source /opt/ros/jazzy/setup.bash
 
 # Build the workspace
-echo "Building workspace in /home/2025_r2ws..."
+echo "Building workspace in /home/Robocon2025_R2/2025R2_ws..."
 colcon build --symlink-install
 
 # Source the local workspace
