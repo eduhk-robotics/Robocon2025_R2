@@ -9,8 +9,8 @@ cd ~/Robocon2025_R2/2025R2_ws
 
 source ~/Robocon2025_R2/venv/bin/activate
 
-export PYTHONPATH=/home/edurobotics/Robocon2025_R2/.venv/lib/python3.12/site-packages:$PYTHONPATH
-export PATH=/home/edurobotics/Robocon2025_R2/venv/bin:$PATH
+export PYTHONPATH=/home/robotics/Robocon2025_R2/.venv/lib/python3.12/site-packages:$PYTHONPATH
+export PATH=/home/robotics/Robocon2025_R2/venv/bin:$PATH
 
 # Source ROS 2 environment (adjust 'foxy' if you use galactic, humble, iron, etc.)
 source /opt/ros/jazzy/setup.bash
