@@ -20,7 +20,7 @@ class OmniWheelSpeedNode(Node):
         )
 
         # Publish motor speed commands (to damiao)
-        self.publisher_ = self.create_publisher(Float32MultiArray, 'damiao', 10)
+        self.publisher_ = self.create_publisher(Float32MultiArray, 'damiao_control', 10)
 
     def driving_callback(self, msg):
         direction = msg.data[0]  # degrees
