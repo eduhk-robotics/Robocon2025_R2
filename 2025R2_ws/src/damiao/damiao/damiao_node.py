@@ -101,7 +101,8 @@ class MotorControllerNode(Node):
         # Extract motor control data
         motor_id = int(msg.data[0])  # Motor ID (1-based index)
         mode = int(msg.data[1])      # Control mode (0: Stop, 1: Speed, 2: Position & Speed)
-        speed = float(msg.data[2])   # Desired speed
+        speed_degree = float(msg.data[2])   # Desired speed
+        speed = speed_degree * (math.pi / 180)
         position = float(msg.data[3])  # Desired position (only used in mode 2: position control)
 
         self.get_logger().info(f"Received Motor Control Command - Motor ID: {motor_id}, Mode: {mode}, Speed: {speed}, Position: {position}")

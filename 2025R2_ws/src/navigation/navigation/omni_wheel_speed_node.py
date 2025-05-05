@@ -32,10 +32,10 @@ class OmniWheelSpeedNode(Node):
         for motor_id, speed in enumerate(motor_speeds_dps, start=1):
             message = Float32MultiArray()
             message.data = [
-                float(motor_id),  # Motor ID (1,2,3,4...)
-                1.0,              # Mode (always 1 for speed mode)
-                float(speed),     # Speed (degrees per second)
-                0.0               # Position (not used for mode 1)
+                float(motor_id),            # Motor ID (1,2,3,4...)
+                1.0,                        # Mode (always 1 for speed mode)
+                float(speed) / 19.20321,    # Speed (degrees per second)
+                0.0                         # Position (not used for mode 1)
             ]
             self.publisher_.publish(message)
             self.get_logger().info(f'Published to damiao: {message.data}')
